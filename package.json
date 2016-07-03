@@ -1,0 +1,24 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "my learning days",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahesh434/learn.git"
+  },
+  "author": "k.durgamahesh@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahesh434/learn/issues"
+  },
+  "homepage": "https://github.com/Mahesh434/learn#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  }
+}

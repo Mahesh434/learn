@@ -1,0 +1,25 @@
+{
+  "name": "learn",
+  "description": "my learning days",
+  "main": "index.html",
+  "authors": [
+    "k.durgamahesh@gmail.com"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Mahesh434/learn",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap": "^3.3.6",
+    "jquery": "^3.0.0",
+    "requirejs": "^2.2.0"
+  }
+}
