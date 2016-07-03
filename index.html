@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>My Learning Days</title>
-    <script src="bower_components/requirejs/require.js" data-main="scripts/main.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/custom.css">
 </head>
 <body>
 
+<div id="wrapper" data-ng-app="myApp" data-ng-controller="mainController">
+    <div id="header">
+        <a href="#">Project K</a>
+        <a href="#" class="top-icons"><i class="fa fa-sign-out"></i></a>
+        <a href="#" class="top-icons"><i class="fa fa-envelope"></i><label class="count">5</label></a>
+        <a href="#" class="top-icons"><i class="fa fa-bell-o"></i><label class="count">4</label></a>
+    </div>
+    <!--Sidebar-->
+    <div id="sidebar-wrapper">
+        <div id="nickname"><i class="fa fa-user"></i>Welcome Name</div>
+        <div id="userlogo">
+            <img id="avatar" src="images/avatar.png">
+            <div>
+                <a href="#/editprofile"> <i class="fa fa-pencil"></i>Edit Profile</a>
+            </div>
+        </div>
+        <ul id="navbar-left">
+            <li data-ng-class="{selected:isSelected('{{menuItem.link}}')}" data-ng-repeat="menuItem in appConfig.getLeftMenu()"><a href="#{{menuItem.link}}"> <i
+                    class="{{menuItem.icon}}"></i>{{menuItem.name}}</a></li>
+        </ul>
+    </div>
+
+    <!--page content-->
+    <div id="page-content-wrapper">
+        <div ng-view></div>
+    </div>
+    <div id="fotter">
+        <a href="#" class="top-icons"><i class="fa fa-sign-out"></i></a>
+        <a href="#" class="top-icons"><i class="fa fa-envelope"></i></a>
+        <a href="#" class="top-icons"><i class="fa fa-bell-o"></i></a>
+    </div>
+</div>
+
+<script>
+    var app=angular.module('myApp',['ngRoute']);
+</script>
+<script src="dist/combined.js"></script>
 </body>
 </html>

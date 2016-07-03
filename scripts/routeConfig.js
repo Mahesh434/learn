@@ -1,0 +1,22 @@
+/**
+ * Created by Mahesh on 7/3/2016.
+ */
+app.config(['$routeProvider',function($routeProvider){
+    $routeProvider
+        .when('/home',{
+        templateUrl:'views/home.html'
+    })
+        .when('/aboutus',{
+            templateUrl:'views/aboutus.html',
+        })
+        .when('/search',{
+            templateUrl:'views/search.html',
+        })
+        .when('/contactus',{
+            templateUrl:'views/contactus.html',
+        })
+        .when('/editprofile',{
+            templateUrl:'views/editProfile.html'
+        })
+        .otherwise({redirectTo:'/home'})
+}]);
